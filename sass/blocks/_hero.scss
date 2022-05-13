@@ -1,0 +1,152 @@
+.hero{
+  width: 100%;
+  position: relative;
+  @include flex-starter;
+  padding: 3.5rem 0 15.625rem;
+  background-color: $midnight-green;
+
+  &::before{
+    position: absolute;
+    top: 4rem;
+    left: calc(50% - 53.5rem);
+    display: block;
+    width: 12.5rem;
+    height: 12.5rem;
+    background-image: url("../images/hero_bgi-left.svg");
+    background-repeat: no-repeat;
+    background-size: 12.5rem;
+    background-position: center;
+    z-index: 1;
+    content: "";
+  }
+
+  &::after{
+    position: absolute;
+    bottom: 0;
+    left: calc(50% + 12.5rem);
+    display: block;
+    width: 22.375rem;
+    height: 6.25rem;
+    background-image: url("../images/hero_bgi-bottom.svg");
+    background-repeat: no-repeat;
+    background-size: 22.375rem 6.25rem;
+    background-position: center;
+    z-index: 1;
+    content: "";
+  }
+}
+
+.hero__title-box{
+  display: inline-block;
+  width: 100%;
+  max-width: 35rem;
+  margin-right: 6rem;
+}
+
+.hero__title{
+  margin: 0;
+  font-weight: 700;
+  font-size: 6.25rem;
+  line-height: 6.25rem;
+  color: $white;
+}
+
+.hero__title-red{
+  color: $light-coral;
+}
+
+.hero__text-box{
+  display: inline-block;
+  width: 100%;
+  max-width: 27.813rem;
+}
+
+.hero__link{
+  display: inline-block;
+  margin-bottom: 4.938rem;
+  width: 3.125rem;
+  height: 0.25rem;
+  background-color: $rapture-blue;
+}
+
+.hero__text{
+  margin: 0;
+  font-weight: 600;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  color: $white;
+}
+
+
+@media only screen and (max-width: 69.75rem){
+  .hero::after{
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 71.563rem){
+
+  .hero__title-box{
+    margin-right: 0;
+    margin-bottom: 5rem;
+  }
+}
+
+@media only screen and (max-width: 48rem) {
+
+  .hero{
+    padding: 3rem 0 15.625rem;
+    text-align: center;
+
+    &::after{
+      display: block;
+      bottom: 0;
+      left: calc(50% - 11.25rem);
+    }
+  }
+
+  .hero__title-box{
+    max-width: 24rem;
+    margin-right: 0;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero__title{
+    font-size: 4rem;
+    line-height: 3.5rem;
+    text-align: center;
+  }
+
+  .hero__text-box{
+    max-width: 28.563rem;
+  }
+
+  .hero__link{
+    display: none;
+  }
+
+  .hero__text{
+    font-size: 0.938rem;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 36rem) {
+
+  .hero{
+    padding: 2rem 0 12.313rem;
+  }
+
+  .hero__title-box{
+    max-width: 14rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .hero__title{
+    font-size: 2.5rem;
+  }
+
+  .hero__text-box{
+    max-width: 20.438rem;
+  }
+}

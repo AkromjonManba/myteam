@@ -1,0 +1,141 @@
+.content{
+  padding: 8.75rem 0;
+  background-color: $deep-jungle-green;
+  text-align: center;
+  background-image: url("../../images/content-top-bgi.svg"), url("../../images/content-bottom-bgi.svg");
+  background-repeat: no-repeat;
+  background-size: 9.188rem 6.25rem, 12.5rem 6.25rem;
+  background-position: calc(50% - 42.5rem) top, calc(50% + 40.625rem) bottom;
+}
+
+.content__title-box{
+  display: inline-block;
+  margin-bottom: 5.75rem;
+  width: 100%;
+  max-width: 58.25rem;
+}
+
+.content__title{
+  margin: 0;
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 3rem;
+  text-align: center;
+  color: $white;
+
+  &--desc{
+    color: $rapture-blue
+  }
+}
+
+.content__list{
+  @include flex-starter;
+  @include list-global;
+}
+
+.content__item{
+  position: relative;
+  margin-right: 1.875rem;
+  width: 100%;
+  max-width: 21.875rem;
+  z-index: 10;
+  vertical-align: middle;
+
+  &:nth-child(3){
+    margin-right: 0;
+  }
+
+  &::before{
+    position: absolute;
+    top: -1.875rem;
+    left: calc(50% - 2.188rem);
+    display: block;
+    width: 4.188rem;
+    height: 3.5rem;
+    background-image: url("../images/content-item-bgi.svg");
+    background-repeat: no-repeat;
+    background-size: 4.188rem 3.5rem;
+    background-position: center;
+    z-index: -1;
+    content: "";
+  }
+}
+
+.content__text{
+  margin: 0; 
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  font-size: 0.938rem;
+  line-height: 1.563rem;
+  color: $white; 
+}
+
+.content__subject{
+  display: block;
+  margin-bottom: 0.125rem;
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  color: $rapture-blue;
+}
+
+.content__desc{
+  display: block;
+  margin-bottom: 2rem;
+  font-size: 0.813rem;
+  line-height: 1.125rem;
+  color: $white;
+}
+
+
+
+@media only screen and (max-width: 48rem) {
+  
+  .content{
+    padding: 6.25rem 0;
+    background-position: calc(50% - 19.688rem) top, calc(50% + 17.813rem) bottom;
+  }
+
+  .content__title-box{
+    max-width: 30.625rem;
+  }
+
+  .content__title{
+    font-size: 2rem;
+    line-height: 2rem; 
+  }
+
+  .content__list{
+    flex-direction: column;
+  }
+
+  .content__item{
+    max-width: 36rem;
+    margin-right: 0;
+    margin-bottom: 5.25rem;
+  }
+
+  .content__text{
+    margin-bottom: 1rem;
+  }
+
+  .content__desc{
+    margin-bottom: 1rem;
+  }
+}
+
+@media only screen and (max-width: 36rem) {
+
+  .content{
+    padding: 8.75rem 0 10.25rem 0;
+  }
+
+}
+
+@media only screen and (max-width: 23.438rem) {
+
+  .content{
+    background-position: calc(50% - 7.5rem) top, calc(50% + 6rem) bottom;
+  }
+
+}

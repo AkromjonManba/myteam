@@ -1,0 +1,18 @@
+.container {
+  width: 100%;
+  max-width: 71.875rem;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+@media only screen and (max-width: 48rem) {
+  .container{
+    max-width: 43rem;
+  }
+}
+
+@media only screen and (max-width: 36rem) {
+  .container{
+    max-width: 33rem;
+  }
+}
